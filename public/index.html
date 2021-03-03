@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<!-- CSS -->
+		<link
+			rel="stylesheet"
+			href="<%= BASE_URL %>css/bootstrap-reboot.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="<%= BASE_URL %>css/bootstrap-grid.min.css"
+		/>
+		<link rel="stylesheet" href="<%= BASE_URL %>css/theme-default.css" />
+		<link rel="stylesheet" href="<%= BASE_URL %>css/paymentfont.min.css" />
+		<link rel="stylesheet" href="<%= BASE_URL %>css/ionicons.min.css" />
+		<link rel="stylesheet" href="<%= BASE_URL %>css/main.css" />
+
+		<!-- Favicons -->
+		<link
+			rel="icon"
+			type="image/png"
+			href="<%= BASE_URL %>icon/favicon-32x32.png"
+			sizes="32x32"
+		/>
+		<link
+			rel="apple-touch-icon"
+			href="<%= BASE_URL %>icon/favicon-32x32.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="72x72"
+			href="<%= BASE_URL %>icon/apple-touch-icon-72x72.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="114x114"
+			href="<%= BASE_URL %>icon/apple-touch-icon-114x114.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="144x144"
+			href="<%= BASE_URL %>icon/apple-touch-icon-144x144.png"
+		/>
+
+		<title><%= htmlWebpackPlugin.options.title %></title>
+	</head>
+	<body>
+		<noscript>
+			<strong
+				>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't
+				work properly without JavaScript enabled. Please enable it to
+				continue.</strong
+			>
+		</noscript>
+		<div id="app"></div>
+		<!-- built files will be auto injected -->
+		<script src="<%= BASE_URL %>js/vue-toast-notification.js"></script>
+	</body>
+</html>
