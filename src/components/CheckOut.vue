@@ -80,6 +80,10 @@ export default {
 			setTotal: "cart/setTotal",
 			resetCoupon: "cart/resetCoupon"
 		})
+	},
+	mounted() {
+		this.resetCoupon();
+		this.setTotal();
 	}
 };
 </script>
