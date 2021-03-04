@@ -112,17 +112,12 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
 	name: "Cart",
 	props: ["items"],
 	computed: {
-		Total() {
-			let total = 0;
-			this.items.forEach(item => {
-				total += item.price * item.quantity;
-			});
-			return total;
-		}
+		...mapState({ Total: state => state.cart.total })
 	}
 };
 </script>

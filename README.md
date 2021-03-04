@@ -1,4 +1,4 @@
-# zartex_artshop_clientside
+# my_cartshop
 
 ## Project setup
 

@@ -84,7 +84,8 @@ export default {
 		...mapMutations({
 			setCurrentFilter: "product/setFilter",
 			setIncrement: "cart/setIncrement",
-			setDecrement: "cart/setDecrement"
+			setDecrement: "cart/setDecrement",
+			setTotal: "cart/setTotal"
 		}),
 		handleAdd(itemToAdd) {
 			// add the item or increase quantity
@@ -112,10 +113,12 @@ export default {
 		// increment filter
 		handleIncrement(index) {
 			this.setIncrement(index);
+			this.setTotal();
 		},
 		// decrement filter
 		handleDecrement(index) {
 			this.setDecrement(index);
+			this.setTotal();
 		},
 		// remove item by index
 		handleRemove(index) {
