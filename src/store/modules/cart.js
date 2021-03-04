@@ -49,9 +49,23 @@ export default {
 					if (state.coupon_code == "FIXED10") {
 						total += cartItem.price * cartItem.quantity - state.discount;
 					} else if (state.coupon_code == "PERCENT10") {
-						total +=
-							cartItem.price * cartItem.quantity -
-							cartItem.price * cartItem.quantity * state.discount;
+						let calc = cartItem.price * cartItem.quantity * state.discount;
+						total += cartItem.price * cartItem.quantity - calc;
+					} else if (state.coupon_code == "MIXED10") {
+						let discount_1 =
+							cartItem.price * cartItem.quantity * state.discount[1];
+						discount_1 = cartItem.price * cartItem.quantity - discount_1;
+						let discount_2 = discount_2 - state.discount[0];
+						if (discount_1 > discount_2) {
+							total += discount_2;
+						} else {
+							total += discount_1;
+						}
+					} else if (state.coupon_code == "REJECTED10") {
+						let calc = cartItem.price * cartItem.quantity * state.discount[1];
+						calc = cartItem.price * cartItem.quantity - calc;
+						calc = calc - state.discount[0];
+						total += calc;
 					}
 				} else {
 					total += cartItem.price * cartItem.quantity;

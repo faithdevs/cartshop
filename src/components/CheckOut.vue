@@ -59,6 +59,14 @@ export default {
 					if (this.cartItems.length >= 2 && this.total > 100) {
 						this.setTotal({ code: this.couponCode, discount: 0.1 });
 					}
+				} else if (this.couponCode == "MIXED10") {
+					if (this.cartItems.length >= 3 && this.total > 200) {
+						this.setTotal({ code: this.couponCode, discount: [10, 0.1] });
+					}
+				} else if (this.couponCode == "REJECTED10") {
+					if (this.total > 1000) {
+						this.setTotal({ code: this.couponCode, discount: [10, 0.1] });
+					}
 				}
 			}
 			if (after == "") {
